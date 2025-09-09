@@ -227,7 +227,7 @@ def _landsat_stats(
             nodata = 0
 
         vrt_params = dict(
-            nodata=nodata, add_alpha=False, src_nodata=nodata, init_dest_nodata=False
+            nodata=nodata, add_alpha=False, src_nodata=nodata, init_dest_nodata=True
         )
         with WarpedVRT(src, **vrt_params) as vrt:
             arr = vrt.read(out_shape=out_shape, indexes=[1], masked=True)
