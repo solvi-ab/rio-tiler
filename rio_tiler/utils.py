@@ -433,7 +433,7 @@ def _tile_read(
             height=orig_vrt_height,
         )
 
-    vrt_params.update(dict(transform=vrt_transform, width=vrt_width, height=vrt_height, init_dest_nodata=True))
+    vrt_params.update(dict(transform=vrt_transform, width=vrt_width, height=vrt_height))
 
     indexes = indexes if indexes is not None else src_dst.indexes
     out_shape = (len(indexes), tilesize, tilesize)
